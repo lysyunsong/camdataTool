@@ -1,0 +1,26 @@
+2025-11-14T14:20:45.172+08:00  INFO 30248 --- [main] com.part.PartApplication                 : Starting PartApplication using Java 21 with PID 30248 (D:\code\2025\dataProcess\component-classification-system\target\classes started by Administrator in D:\code\2025\dataProcess\component-classification-system)
+2025-11-14T14:20:45.177+08:00 DEBUG 30248 --- [main] com.part.PartApplication                 : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-11-14T14:20:45.177+08:00  INFO 30248 --- [main] com.part.PartApplication                 : No active profile set, falling back to 1 default profile: "default"
+2025-11-14T14:20:45.843+08:00  INFO 30248 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-14T14:20:45.849+08:00  INFO 30248 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-14T14:20:45.850+08:00  INFO 30248 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-11-14T14:20:45.882+08:00  INFO 30248 --- [main] o.a.c.c.C.[.[localhost].[/part-system]   : Initializing Spring embedded WebApplicationContext
+2025-11-14T14:20:45.883+08:00  INFO 30248 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 677 ms
+2025-11-14T14:20:46.370+08:00  WARN 30248 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-11-14T14:20:46.379+08:00  INFO 30248 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-14T14:20:46.388+08:00 ERROR 30248 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
