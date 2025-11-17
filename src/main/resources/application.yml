@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: oracle.jdbc.OracleDriver
-    url: jdbc:oracle:thin:@xxx:REP
-    username: xxx
-    password: xxx
+    url: jdbc:oracle:thin:@192.168.7.237:19290:REP
+    username: CAMD_3S
+    password: Buja5wEYtjxkunMj
     hikari:
       maximum-pool-size: 10
       connection-timeout: 0
@@ -20,7 +20,7 @@ mybatis:
     default-statement-timeout: 0
 
 server:
-  port: 8080
+  port: 8088
   servlet:
     context-path: /part-system
 # Swagger3配置（OpenAPI）

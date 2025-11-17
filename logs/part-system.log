@@ -1,16 +1,16 @@
-2025-11-14T14:20:45.172+08:00  INFO 30248 --- [main] com.part.PartApplication                 : Starting PartApplication using Java 21 with PID 30248 (D:\code\2025\dataProcess\component-classification-system\target\classes started by Administrator in D:\code\2025\dataProcess\component-classification-system)
-2025-11-14T14:20:45.177+08:00 DEBUG 30248 --- [main] com.part.PartApplication                 : Running with Spring Boot v3.2.0, Spring v6.1.1
-2025-11-14T14:20:45.177+08:00  INFO 30248 --- [main] com.part.PartApplication                 : No active profile set, falling back to 1 default profile: "default"
-2025-11-14T14:20:45.843+08:00  INFO 30248 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-11-14T14:20:45.849+08:00  INFO 30248 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-11-14T14:20:45.850+08:00  INFO 30248 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2025-11-14T14:20:45.882+08:00  INFO 30248 --- [main] o.a.c.c.C.[.[localhost].[/part-system]   : Initializing Spring embedded WebApplicationContext
-2025-11-14T14:20:45.883+08:00  INFO 30248 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 677 ms
-2025-11-14T14:20:46.370+08:00  WARN 30248 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2025-11-14T14:20:46.379+08:00  INFO 30248 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2025-11-17T09:13:45.545+08:00  INFO 29456 --- [main] com.part.PartApplication                 : Starting PartApplication using Java 21 with PID 29456 (D:\code\2025\dataProcess\component-classification-system\target\classes started by Administrator in D:\code\2025\dataProcess\component-classification-system)
+2025-11-17T09:13:45.551+08:00 DEBUG 29456 --- [main] com.part.PartApplication                 : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-11-17T09:13:45.551+08:00  INFO 29456 --- [main] com.part.PartApplication                 : No active profile set, falling back to 1 default profile: "default"
+2025-11-17T09:13:46.241+08:00  INFO 29456 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-17T09:13:46.253+08:00  INFO 29456 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-17T09:13:46.253+08:00  INFO 29456 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-11-17T09:13:46.287+08:00  INFO 29456 --- [main] o.a.c.c.C.[.[localhost].[/part-system]   : Initializing Spring embedded WebApplicationContext
+2025-11-17T09:13:46.288+08:00  INFO 29456 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 709 ms
+2025-11-17T09:13:46.829+08:00  WARN 29456 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-11-17T09:13:46.840+08:00  INFO 29456 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-11-14T14:20:46.388+08:00 ERROR 30248 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+2025-11-17T09:13:46.852+08:00 ERROR 29456 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
 
 ***************************
 APPLICATION FAILED TO START
@@ -24,3 +24,289 @@ Action:
 
 Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
 
+2025-11-17T09:14:03.790+08:00  INFO 29200 --- [main] com.part.PartApplication                 : Starting PartApplication using Java 21 with PID 29200 (D:\code\2025\dataProcess\component-classification-system\target\classes started by Administrator in D:\code\2025\dataProcess\component-classification-system)
+2025-11-17T09:14:03.791+08:00 DEBUG 29200 --- [main] com.part.PartApplication                 : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-11-17T09:14:03.791+08:00  INFO 29200 --- [main] com.part.PartApplication                 : No active profile set, falling back to 1 default profile: "default"
+2025-11-17T09:14:04.329+08:00  INFO 29200 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8088 (http)
+2025-11-17T09:14:04.334+08:00  INFO 29200 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-17T09:14:04.334+08:00  INFO 29200 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-11-17T09:14:04.363+08:00  INFO 29200 --- [main] o.a.c.c.C.[.[localhost].[/part-system]   : Initializing Spring embedded WebApplicationContext
+2025-11-17T09:14:04.363+08:00  INFO 29200 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 550 ms
+2025-11-17T09:14:04.758+08:00  INFO 29200 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8088 (http) with context path '/part-system'
+2025-11-17T09:14:04.762+08:00  INFO 29200 --- [main] com.part.PartApplication                 : Started PartApplication in 1.194 seconds (process running for 1.639)
+2025-11-17T09:14:40.526+08:00  INFO 29200 --- [http-nio-8088-exec-3] o.a.c.c.C.[.[localhost].[/part-system]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-17T09:14:40.526+08:00  INFO 29200 --- [http-nio-8088-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-17T09:14:40.527+08:00  INFO 29200 --- [http-nio-8088-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-11-17T09:14:40.799+08:00  INFO 29200 --- [http-nio-8088-exec-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 117 ms
+2025-11-17T09:18:07.359+08:00  INFO 29200 --- [http-nio-8088-exec-7] c.p.service.impl.ComponentServiceImpl    : 导出零部件数据到Excel，开始时间: 2018-01-01 00:00:00, 结束时间: 2019-01-01 00:00:00, 父名称模糊查询: null
+2025-11-17T09:18:07.359+08:00  INFO 29200 --- [http-nio-8088-exec-7] c.p.service.impl.ComponentServiceImpl    : 抽取零部件数据，开始时间: 2018-01-01 00:00:00, 结束时间: 2019-01-01 00:00:00, 父名称模糊查询: null
+2025-11-17T09:18:07.394+08:00  INFO 29200 --- [http-nio-8088-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-17T09:18:07.707+08:00  INFO 29200 --- [http-nio-8088-exec-7] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@3371e98c
+2025-11-17T09:18:07.710+08:00  INFO 29200 --- [http-nio-8088-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-17T09:20:17.680+08:00  INFO 29200 --- [http-nio-8088-exec-6] c.p.service.impl.ComponentServiceImpl    : 导出零部件数据到Excel，开始时间: 2018-01-01 00:00:00, 结束时间: 2018-02-01 00:00:00, 父名称模糊查询: null
+2025-11-17T09:20:17.680+08:00  INFO 29200 --- [http-nio-8088-exec-6] c.p.service.impl.ComponentServiceImpl    : 抽取零部件数据，开始时间: 2018-01-01 00:00:00, 结束时间: 2018-02-01 00:00:00, 父名称模糊查询: null
+2025-11-17T09:20:40.474+08:00  WARN 29200 --- [http-nio-8088-exec-7] com.zaxxer.hikari.pool.ProxyConnection   : HikariPool-1 - Connection oracle.jdbc.driver.T4CConnection@3371e98c marked as broken because of SQLSTATE(08006), ErrorCode(17002)
+
+java.sql.SQLRecoverableException: IO 错误: Socket read interrupted
+	at oracle.jdbc.driver.T4CPreparedStatement.fetch(T4CPreparedStatement.java:1403) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.fetchMoreRows(OracleStatement.java:4040) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.fetchMoreRows(InsensitiveScrollableResultSet.java:919) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.fetchNextRows(InsensitiveScrollableResultSet.java:825) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.absoluteInternal(InsensitiveScrollableResultSet.java:797) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.next(InsensitiveScrollableResultSet.java:498) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at com.zaxxer.hikari.pool.HikariProxyResultSet.next(HikariProxyResultSet.java) ~[HikariCP-5.0.1.jar:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.apache.ibatis.logging.jdbc.ResultSetLogger.invoke(ResultSetLogger.java:68) ~[mybatis-3.5.14.jar:3.5.14]
+	at jdk.proxy3/jdk.proxy3.$Proxy100.next(Unknown Source) ~[na:na]
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForSimpleResultMap(DefaultResultSetHandler.java:364) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValues(DefaultResultSetHandler.java:337) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSet(DefaultResultSetHandler.java:310) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSets(DefaultResultSetHandler.java:202) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:66) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:80) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:65) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:110) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:90) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142) ~[mybatis-3.5.14.jar:3.5.14]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425) ~[mybatis-spring-3.0.3.jar:3.0.3]
+	at jdk.proxy2/jdk.proxy2.$Proxy74.selectList(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224) ~[mybatis-spring-3.0.3.jar:3.0.3]
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.14.jar:3.5.14]
+	at jdk.proxy2/jdk.proxy2.$Proxy75.extractComponentWithSubnode(Unknown Source) ~[na:na]
+	at com.part.service.impl.ComponentServiceImpl.extractComponents(ComponentServiceImpl.java:33) ~[classes/:na]
+	at com.part.service.impl.ComponentServiceImpl.exportToExcel(ComponentServiceImpl.java:39) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352) ~[spring-aop-6.1.1.jar:6.1.1]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:713) ~[spring-aop-6.1.1.jar:6.1.1]
+	at com.part.service.impl.ComponentServiceImpl$$SpringCGLIB$$0.exportToExcel(<generated>) ~[classes/:na]
+	at com.part.controller.ComponentController.exportToExcel(ComponentController.java:52) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.16.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.16.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: java.io.InterruptedIOException: Socket read interrupted
+	at oracle.net.nt.TimeoutSocketChannel.handleInterrupt(TimeoutSocketChannel.java:549) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.net.nt.TimeoutSocketChannel.read(TimeoutSocketChannel.java:420) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.net.ns.NSProtocolNIO.doSocketRead(NSProtocolNIO.java:1119) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.net.ns.NIOPacket.readHeader(NIOPacket.java:267) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.net.ns.NIOPacket.readPacketFromSocketChannel(NIOPacket.java:199) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.net.ns.NIOPacket.readFromSocketChannel(NIOPacket.java:141) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.net.ns.NIOPacket.readFromSocketChannel(NIOPacket.java:114) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.net.ns.NIONSDataChannel.readDataFromSocketChannel(NIONSDataChannel.java:98) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.T4CMAREngineNIO.prepareForUnmarshall(T4CMAREngineNIO.java:834) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.T4CMAREngineNIO.getNBytes(T4CMAREngineNIO.java:636) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.T4CMAREngineNIO.unmarshalNBytes(T4CMAREngineNIO.java:605) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.DynamicByteArray.unmarshalBuffer(DynamicByteArray.java:304) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.DynamicByteArray.unmarshalCLR(DynamicByteArray.java:219) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.T4CMarshaller$BasicMarshaller.unmarshalBytes(T4CMarshaller.java:136) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.T4CMarshaller$BasicMarshaller.unmarshalOneRow(T4CMarshaller.java:115) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.T4CVarcharAccessor.unmarshalOneRow(T4CVarcharAccessor.java:239) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.T4CTTIrxd.unmarshal(T4CTTIrxd.java:1693) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.T4CTTIrxd.unmarshal(T4CTTIrxd.java:1410) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.T4C8Oall.readRXD(T4C8Oall.java:991) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:639) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:291) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:498) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:155) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.fetch(T4CPreparedStatement.java:1398) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	... 90 common frames omitted
+
+2025-11-17T09:20:40.474+08:00  WARN 29200 --- [http-nio-8088-exec-6] com.zaxxer.hikari.pool.ProxyConnection   : HikariPool-1 - Connection oracle.jdbc.driver.T4CConnection@5652c5f7 marked as broken because of SQLSTATE(08006), ErrorCode(17002)
+
+java.sql.SQLRecoverableException: IO 错误: Socket read interrupted
+	at oracle.jdbc.driver.T4CPreparedStatement.fetch(T4CPreparedStatement.java:1403) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.OracleStatement.fetchMoreRows(OracleStatement.java:4040) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.fetchMoreRows(InsensitiveScrollableResultSet.java:919) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.fetchNextRows(InsensitiveScrollableResultSet.java:825) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.absoluteInternal(InsensitiveScrollableResultSet.java:797) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.next(InsensitiveScrollableResultSet.java:498) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at com.zaxxer.hikari.pool.HikariProxyResultSet.next(HikariProxyResultSet.java) ~[HikariCP-5.0.1.jar:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.apache.ibatis.logging.jdbc.ResultSetLogger.invoke(ResultSetLogger.java:68) ~[mybatis-3.5.14.jar:3.5.14]
+	at jdk.proxy3/jdk.proxy3.$Proxy100.next(Unknown Source) ~[na:na]
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForSimpleResultMap(DefaultResultSetHandler.java:364) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValues(DefaultResultSetHandler.java:337) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSet(DefaultResultSetHandler.java:310) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSets(DefaultResultSetHandler.java:202) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:66) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:80) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:65) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:110) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:90) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142) ~[mybatis-3.5.14.jar:3.5.14]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425) ~[mybatis-spring-3.0.3.jar:3.0.3]
+	at jdk.proxy2/jdk.proxy2.$Proxy74.selectList(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224) ~[mybatis-spring-3.0.3.jar:3.0.3]
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.14.jar:3.5.14]
+	at jdk.proxy2/jdk.proxy2.$Proxy75.extractComponentWithSubnode(Unknown Source) ~[na:na]
+	at com.part.service.impl.ComponentServiceImpl.extractComponents(ComponentServiceImpl.java:33) ~[classes/:na]
+	at com.part.service.impl.ComponentServiceImpl.exportToExcel(ComponentServiceImpl.java:39) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352) ~[spring-aop-6.1.1.jar:6.1.1]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:713) ~[spring-aop-6.1.1.jar:6.1.1]
+	at com.part.service.impl.ComponentServiceImpl$$SpringCGLIB$$0.exportToExcel(<generated>) ~[classes/:na]
+	at com.part.controller.ComponentController.exportToExcel(ComponentController.java:52) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.16.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.16.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: java.io.InterruptedIOException: Socket read interrupted
+	at oracle.net.nt.TimeoutSocketChannel.handleInterrupt(TimeoutSocketChannel.java:549) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.net.nt.TimeoutSocketChannel.read(TimeoutSocketChannel.java:420) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.net.ns.NSProtocolNIO.doSocketRead(NSProtocolNIO.java:1119) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.net.ns.NIOPacket.readHeader(NIOPacket.java:267) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.net.ns.NIOPacket.readPacketFromSocketChannel(NIOPacket.java:199) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.net.ns.NIOPacket.readFromSocketChannel(NIOPacket.java:141) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.net.ns.NIOPacket.readFromSocketChannel(NIOPacket.java:114) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.net.ns.NIONSDataChannel.readDataFromSocketChannel(NIONSDataChannel.java:98) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.T4CMAREngineNIO.prepareForUnmarshall(T4CMAREngineNIO.java:834) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.T4CMAREngineNIO.getNBytes(T4CMAREngineNIO.java:636) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.T4CMAREngineNIO.unmarshalNBytes(T4CMAREngineNIO.java:605) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.DynamicByteArray.unmarshalBuffer(DynamicByteArray.java:304) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.DynamicByteArray.unmarshalCLR(DynamicByteArray.java:219) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.T4CMarshaller$BasicMarshaller.unmarshalBytes(T4CMarshaller.java:136) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.T4CMarshaller$BasicMarshaller.unmarshalOneRow(T4CMarshaller.java:115) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.T4CVarcharAccessor.unmarshalOneRow(T4CVarcharAccessor.java:239) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.T4CTTIrxd.unmarshal(T4CTTIrxd.java:1693) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.T4CTTIrxd.unmarshal(T4CTTIrxd.java:1410) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.T4C8Oall.readRXD(T4C8Oall.java:991) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:639) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:291) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:498) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:155) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.fetch(T4CPreparedStatement.java:1398) ~[ojdbc11-21.1.0.0.jar:21.1.0.0.0]
+	... 90 common frames omitted
+
+2025-11-17T09:20:40.574+08:00  INFO 29200 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-17T09:20:40.574+08:00  WARN 29200 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.pool.HikariPool        : Timed-out waiting for add connection executor to shutdown
+2025-11-17T09:20:40.596+08:00  INFO 29200 --- [HikariPool-1 connection adder] com.zaxxer.hikari.util.ConcurrentBag     : ConcurrentBag has been closed, ignoring add()
+2025-11-17T09:20:40.673+08:00  INFO 29200 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-17T09:20:42.136+08:00  INFO 25804 --- [main] com.part.PartApplication                 : Starting PartApplication using Java 21 with PID 25804 (D:\code\2025\dataProcess\component-classification-system\target\classes started by Administrator in D:\code\2025\dataProcess\component-classification-system)
+2025-11-17T09:20:42.137+08:00 DEBUG 25804 --- [main] com.part.PartApplication                 : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-11-17T09:20:42.137+08:00  INFO 25804 --- [main] com.part.PartApplication                 : No active profile set, falling back to 1 default profile: "default"
+2025-11-17T09:20:42.675+08:00  INFO 25804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8088 (http)
+2025-11-17T09:20:42.680+08:00  INFO 25804 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-17T09:20:42.681+08:00  INFO 25804 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-11-17T09:20:42.706+08:00  INFO 25804 --- [main] o.a.c.c.C.[.[localhost].[/part-system]   : Initializing Spring embedded WebApplicationContext
+2025-11-17T09:20:42.707+08:00  INFO 25804 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 546 ms
+2025-11-17T09:20:43.102+08:00  INFO 25804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8088 (http) with context path '/part-system'
+2025-11-17T09:20:43.105+08:00  INFO 25804 --- [main] com.part.PartApplication                 : Started PartApplication in 1.222 seconds (process running for 1.624)
+2025-11-17T09:20:45.263+08:00  INFO 25804 --- [http-nio-8088-exec-3] o.a.c.c.C.[.[localhost].[/part-system]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-17T09:20:45.263+08:00  INFO 25804 --- [http-nio-8088-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-17T09:20:45.264+08:00  INFO 25804 --- [http-nio-8088-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-11-17T09:20:45.283+08:00  INFO 25804 --- [http-nio-8088-exec-3] c.p.service.impl.ComponentServiceImpl    : 导出零部件数据到Excel，开始时间: 2018-01-01 00:00:00, 结束时间: 2018-02-01 00:00:00, 父名称模糊查询: null
+2025-11-17T09:20:45.284+08:00  INFO 25804 --- [http-nio-8088-exec-3] c.p.service.impl.ComponentServiceImpl    : 抽取零部件数据，开始时间: 2018-01-01 00:00:00, 结束时间: 2018-02-01 00:00:00, 父名称模糊查询: null
+2025-11-17T09:20:45.320+08:00  INFO 25804 --- [http-nio-8088-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-17T09:20:45.623+08:00  INFO 25804 --- [http-nio-8088-exec-3] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@6c6f73dc
+2025-11-17T09:20:45.624+08:00  INFO 25804 --- [http-nio-8088-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-17T09:44:23.234+08:00  INFO 25804 --- [http-nio-8088-exec-3] com.part.util.ExcelUtil                  : Excel导出成功，文件名: 零部件数据_1763343852316, 数据量: 257958

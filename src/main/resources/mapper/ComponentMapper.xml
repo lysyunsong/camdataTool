@@ -99,87 +99,51 @@
 <!--    </select>-->
     <select id="extractComponentWithSubnode" resultType="com.part.data.entity.ComponentVO">
         SELECT
-        parentStructId,
-        parentCkid,
-        parentName,
-        parentNameEn,
-        parentSymbol,
-        parentWeight,
-        subnodeType,
-        subnodeCkid,
-        subnodeName,
-        subnodeEnName,
-        subnodeSymbol,
-        subnodeWeight,
-        subnodeQuantity,
-        subnodeStructId
-        FROM (
-        SELECT
-        inner_query.*,
-        ROWNUM AS rn
-        FROM (
-        SELECT
         pstr.CSID AS parentStructId,
         pstr.CCKID AS parentCkid,
         comp_parent.CNAME AS parentName,
         comp_parent.CEN_NAME AS parentNameEn,
         comp_parent.CSYMBOL AS parentSymbol,
         comp_parent.CMEA_WEIGHT_PER_ITEM AS parentWeight,
-        CASE
-        WHEN cstr.CNODE_TYPE = 1 THEN '零部件'
-        WHEN cstr.CNODE_TYPE = 2 THEN '半成品'
-        WHEN cstr.CNODE_TYPE = 3 THEN '材料'
-        ELSE '其他'
-        END AS subnodeType,
-        CASE WHEN cstr.CNODE_TYPE = 1 THEN comp_sub.CKID
-        WHEN cstr.CNODE_TYPE = 2 THEN semi_sub.CKID
-        WHEN cstr.CNODE_TYPE = 3 THEN mat_sub.CKID
-        END AS subnodeCkid,
-        CASE WHEN cstr.CNODE_TYPE = 1 THEN comp_sub.CNAME
-        WHEN cstr.CNODE_TYPE = 2 THEN semi_sub.CNAME
-        WHEN cstr.CNODE_TYPE = 3 THEN mat_sub.CNAME
-        END AS subnodeName,
-        CASE WHEN cstr.CNODE_TYPE = 1 THEN comp_sub.CEN_NAME
-        WHEN cstr.CNODE_TYPE = 2 THEN semi_sub.CEN_NAME
-        WHEN cstr.CNODE_TYPE = 3 THEN mat_sub.CEN_NAME
-        END AS subnodeEnName,
-        CASE WHEN cstr.CNODE_TYPE = 1 THEN comp_sub.CSYMBOL
-        WHEN cstr.CNODE_TYPE = 2 THEN semi_sub.CSYMBOL
-        WHEN cstr.CNODE_TYPE = 3 THEN mat_sub.CSYMBOL
-        END AS subnodeSymbol,
+        cstr.CNODE_TYPE  AS subnodeType,
+        cstr.CCKID AS subnodeCkid,
+        COALESCE(comp_sub.CNAME, semi_sub.CNAME, mat_sub.CNAME) AS subnodeName,
+        COALESCE(comp_sub.CEN_NAME, semi_sub.CEN_NAME, mat_sub.CEN_NAME) AS subnodeEnName,
+        COALESCE(comp_sub.CSYMBOL, semi_sub.CSYMBOL, mat_sub.CSYMBOL) AS subnodeSymbol,
         CASE WHEN cstr.CNODE_TYPE = 1 THEN comp_sub.CMEA_WEIGHT_PER_ITEM
         ELSE cstr.CWEIGHT
         END AS subnodeWeight,
         cstr.CQUANTITY AS subnodeQuantity,
         cstr.CSID AS subnodeStructId
         FROM t_mds t
-        JOIN t_structure_list pstr
-        ON pstr.CCKID = t.CKID
-        JOIN T_COMPONENT_NODE comp_parent
-        ON pstr.CCKID = comp_parent.CKID
+        JOIN t_structure_list pstr ON pstr.CCKID = t.CKID
+        JOIN T_COMPONENT_NODE comp_parent ON pstr.CCKID = comp_parent.CKID
+        <if test="startDate != null and endDate != null">
+            AND comp_parent.CCREATE_DATE BETWEEN TO_DATE(#{startDate}, 'YYYY-MM-DD HH24:MI:SS')
+            AND TO_DATE(#{endDate}, 'YYYY-MM-DD HH24:MI:SS')
+        </if>
         <if test="parentNameLike != null and parentNameLike != ''">
             AND comp_parent.CNAME LIKE '%' || #{parentNameLike} || '%'
         </if>
-        JOIN t_structure_list cstr
-        ON pstr.CSID = cstr.CPSID
-        LEFT JOIN T_COMPONENT_NODE comp_sub
-        ON cstr.CCKID = comp_sub.CKID
+        JOIN t_structure_list cstr ON pstr.CSID = cstr.CPSID
+        LEFT JOIN T_COMPONENT_NODE comp_sub ON cstr.CCKID = comp_sub.CKID
         AND cstr.CNODE_TYPE = 1
         AND comp_sub.CDEL_FLAG = 0
-        LEFT JOIN T_SEMI_COMPONENT_NODE semi_sub
-        ON cstr.CCKID = semi_sub.CKID
+        AND comp_sub.CSTATUS != 'ED'
+        LEFT JOIN T_SEMI_COMPONENT_NODE semi_sub ON cstr.CCKID = semi_sub.CKID
         AND cstr.CNODE_TYPE = 2
         AND semi_sub.CDEL_FLAG = 0
         AND (semi_sub.CINNER = 0 OR semi_sub.CMODULE = 1)
-        LEFT JOIN t_material mat_sub
-        ON cstr.CCKID = mat_sub.CKID
+        LEFT JOIN t_material mat_sub ON cstr.CCKID = mat_sub.CKID
         AND cstr.CNODE_TYPE = 3
         AND mat_sub.CDEL_FLAG = 0
         WHERE t.CMDSTYPE = 1
-        AND comp_parent.CCREATE_DATE BETWEEN TO_DATE(#{startDate}, 'YYYY-MM-DD HH24:MI:SS')
-        AND TO_DATE(#{endDate}, 'YYYY-MM-DD HH24:MI:SS')
-        ) inner_query
-        )
+        AND comp_sub.cinner =0
+        AND comp_sub.cdel_flag =0
+        <![CDATA[
+        AND comp_sub.cstatus <> 'ED'
+        ]]>
+        ORDER BY comp_parent.CCREATE_DATE ASC
     </select>
 
     <select id="countComponents" resultType="long">
