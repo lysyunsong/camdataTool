@@ -58,5 +58,7 @@ public interface ComponentService {
      * @return 带预测结果的数据列表
      */
     List<ComponentVO> predictClassification(List<ComponentVO> components);
+
+    int importRawData(String filePath);
 }
     

@@ -3,7 +3,11 @@ package com.part.service.impl;
 import com.alibaba.excel.EasyExcel;
 import com.alibaba.excel.read.listener.PageReadListener;
 import com.part.data.entity.ComponentVO;
+import com.part.data.entity.DdComponentClass;
+import com.part.data.entity.DdRawComponentVO;
 import com.part.data.mapper.ComponentMapper;
+import com.part.data.mapper.DdComponentClassMapper;
+import com.part.data.mapper.DdRawComponentMapper;
 import com.part.service.ComponentService;
 import com.part.util.ExcelUtil;
 import jakarta.servlet.http.HttpServletResponse;
@@ -16,6 +20,7 @@ import org.springframework.util.ResourceUtils;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * 零部件数据处理服务实现
@@ -26,6 +31,8 @@ import java.util.List;
 public class ComponentServiceImpl implements ComponentService {
 
     private final ComponentMapper componentMapper;
+    private final DdRawComponentMapper ddRawComponentMapper; // 新增
+    private final DdComponentClassMapper ddComponentClassMapper; // 新增
 
     @Override
     public List<ComponentVO> extractComponents(String startDate, String endDate, String parentNameLike) {
@@ -134,6 +141,37 @@ public class ComponentServiceImpl implements ComponentService {
         });
         
         return components;
+    }
+    @Override
+    public int importRawData(String filePath) {
+        log.info("导入原始零部件数据，文件路径: {}", filePath);
+        try {
+            File file = ResourceUtils.getFile(filePath);
+            final int[] count = {0};
+            // 读取Excel并转换为DdRawComponentVO（与ComponentVO结构一致，可直接映射）
+            EasyExcel.read(file, ComponentVO.class, new PageReadListener<ComponentVO>(dataList -> {
+                List<DdRawComponentVO> rawList = dataList.stream()
+                        .map(this::convertToRaw)
+                        .collect(Collectors.toList());
+                count[0] += ddRawComponentMapper.batchInsert(rawList);
+                log.info("已导入 {} 条原始数据", count[0]);
+            })).sheet().doRead();
+            return count[0];
+        } catch (FileNotFoundException e) {
+            log.error("原始数据文件不存在", e);
+            throw new RuntimeException("原始数据文件不存在", e);
+        }
+    }
+
+    // 转换方法：ComponentVO -> DdRawComponentVO
+    private DdRawComponentVO convertToRaw(ComponentVO vo) {
+        DdRawComponentVO raw = new DdRawComponentVO();
+        // 字段一一映射（利用lombok的@Data可直接set，或使用BeanUtils.copyProperties）
+        raw.setParentStructId(vo.getParentStructId());
+        raw.setParentCkid(vo.getParentCkid());
+        raw.setParentName(vo.getParentName());
+        // ... 其他字段同理
+        return raw;
     }
 }
     

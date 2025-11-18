@@ -23,7 +23,6 @@ import java.util.List;
 public class ComponentController {
 
     private final ComponentService componentService;
-
     @GetMapping("/extract")
     @Operation(summary = "抽取零部件数据", description = "从数据库抽取零部件及子节点数据")
     public ResponseEntity<List<ComponentVO>> extractComponents(

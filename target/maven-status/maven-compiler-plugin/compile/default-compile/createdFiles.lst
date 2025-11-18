@@ -1,7 +1,0 @@
-com\part\service\ComponentService.class
-com\part\PartApplication.class
-com\part\controller\ComponentController.class
-com\part\data\mapper\ComponentMapper.class
-com\part\service\impl\ComponentServiceImpl.class
-com\part\util\ExcelUtil.class
-com\part\data\entity\ComponentVO.class

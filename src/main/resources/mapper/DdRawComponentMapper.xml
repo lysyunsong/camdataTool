@@ -1,0 +1,32 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.part.data.mapper.DdRawComponentMapper">
+    <insert id="batchInsert">
+        INSERT INTO DD_RAW_COMPONENT (
+        parent_struct_id, parent_ckid, parent_name, parent_name_en,
+        parent_symbol, parent_weight, subnode_type, subnode_ckid,
+        subnode_name, subnode_symbol, subnode_weight, subnode_quantity,
+        subnode_struct_id, manual_label, predicted_label, confidence
+        ) VALUES
+        <foreach collection="list" item="item" separator=",">
+            (
+            #{item.parentStructId}, #{item.parentCkid}, #{item.parentName},
+            #{item.parentNameEn}, #{item.parentSymbol}, #{item.parentWeight},
+            #{item.subnodeType}, #{item.subnodeCkid}, #{item.subnodeName},
+            #{item.subnodeSymbol}, #{item.subnodeWeight}, #{item.subnodeQuantity},
+            #{item.subnodeStructId}, #{item.manualLabel}, #{item.predictedLabel},
+            #{item.confidence}
+            )
+        </foreach>
+    </insert>
+
+    <select id="selectByPage" resultType="com.part.data.entity.DdRawComponentVO">
+        SELECT * FROM DD_RAW_COMPONENT
+        WHERE ROWNUM &lt;= #{limit} AND ROWNUM &gt; #{offset}
+    </select>
+
+    <select id="count" resultType="long">
+        SELECT COUNT(*) FROM DD_RAW_COMPONENT
+    </select>
+</mapper>
