@@ -7,6 +7,7 @@ import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -84,6 +85,22 @@ public class ComponentController {
         return ResponseEntity.ok(result);
     }
 
+    // 在ComponentController.java中新增以下代码
+    @PostMapping(value = "/import-raw", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @Operation(summary = "导入原始零部件数据", description = "将导出的ComponentVO数据导入到DdRawComponentVO表")
+    public ResponseEntity<String> importRawData(
+            @Parameter(description = "原始零部件数据Excel文件（从/export接口导出）")
+            @RequestPart("file") MultipartFile file) {
+
+        try {
+            // 保存上传的临时文件
+            String filePath = saveFileTemp(file);
+            int count = componentService.importRawData(filePath);
+            return ResponseEntity.ok("成功导入 " + count + " 条原始零部件数据到DdRawComponentVO表");
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body("导入失败: " + e.getMessage());
+        }
+    }
     // 保存上传的临时文件
     private String saveFileTemp(MultipartFile file) throws Exception {
         // 实际实现应保存到临时目录
