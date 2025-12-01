@@ -6,19 +6,31 @@
         parent_struct_id, parent_ckid, parent_name, parent_name_en,
         parent_symbol, parent_weight, subnode_type, subnode_ckid,
         subnode_name, subnode_symbol, subnode_weight, subnode_quantity,
-        subnode_struct_id, manual_label, predicted_label, confidence
-        ) VALUES
-        <foreach collection="list" item="item" separator=",">
-            (
-            #{item.parentStructId}, #{item.parentCkid}, #{item.parentName},
-            #{item.parentNameEn}, #{item.parentSymbol}, #{item.parentWeight},
-            #{item.subnodeType}, #{item.subnodeCkid}, #{item.subnodeName},
-            #{item.subnodeSymbol}, #{item.subnodeWeight}, #{item.subnodeQuantity},
-            #{item.subnodeStructId}, #{item.manualLabel}, #{item.predictedLabel},
-            #{item.confidence}
-            )
+        subnode_struct_id, manual_label
+        )
+        SELECT * FROM (
+        <foreach collection="list" item="item" separator="UNION ALL">
+            SELECT
+            #{item.parentStructId, jdbcType=VARCHAR},
+            #{item.parentCkid, jdbcType=VARCHAR},
+            #{item.parentName, jdbcType=VARCHAR},
+            #{item.parentNameEn, jdbcType=VARCHAR},
+            #{item.parentSymbol, jdbcType=VARCHAR},
+            #{item.parentWeight, jdbcType=DECIMAL},
+            #{item.subnodeType, jdbcType=VARCHAR},
+            #{item.subnodeCkid, jdbcType=VARCHAR},
+            #{item.subnodeName, jdbcType=VARCHAR},
+            #{item.subnodeSymbol, jdbcType=VARCHAR},
+            #{item.subnodeWeight, jdbcType=DECIMAL},
+            #{item.subnodeQuantity, jdbcType=DECIMAL},
+            #{item.subnodeStructId, jdbcType=VARCHAR},
+            #{item.manualLabel, jdbcType=VARCHAR}
+            FROM DUAL
         </foreach>
+        )
     </insert>
+
+
 
     <select id="selectByPage" resultType="com.part.data.entity.DdRawComponentVO">
         SELECT * FROM DD_RAW_COMPONENT

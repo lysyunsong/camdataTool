@@ -53,12 +53,12 @@ public class ComponentServiceImpl implements ComponentService {
         try {
             File file = ResourceUtils.getFile(filePath);
             final int[] count = {0};
-            
+
             EasyExcel.read(file, ComponentVO.class, new PageReadListener<ComponentVO>(dataList -> {
                 count[0] += saveAnnotatedData(dataList);
                 log.info("已导入 {} 条标注数据", count[0]);
             })).sheet().doRead();
-            
+
             return count[0];
         } catch (FileNotFoundException e) {
             log.error("导入文件不存在", e);
@@ -76,11 +76,11 @@ public class ComponentServiceImpl implements ComponentService {
         List<ComponentVO> validData = components.stream()
                 .filter(c -> c.getManualLabel() != null && !c.getManualLabel().trim().isEmpty())
                 .toList();
-                
+
         if (validData.isEmpty()) {
             return 0;
         }
-        
+
         return componentMapper.batchInsertAnnotatedData(validData);
     }
 
@@ -93,25 +93,25 @@ public class ComponentServiceImpl implements ComponentService {
     @Override
     public String trainModel() {
         log.info("开始训练分类模型");
-        
+
         // 1. 获取训练数据
         List<ComponentVO> trainingData = getTrainingData("2009-11-04 00:00:00", "2009-11-04 23:59:59");
         if (trainingData.size() < 100) {
             return "训练数据不足，至少需要100条标注数据";
         }
-        
+
         // 2. 特征工程处理
         // 这里只是框架，实际需要根据业务提取特征
-        
+
         // 3. 模型训练
         // 集成LightGBM或其他机器学习库进行模型训练
         try {
             // 模拟模型训练过程
             Thread.sleep(3000);
-            
+
             // 4. 保存模型
             // 将训练好的模型保存到文件系统
-            
+
             log.info("模型训练完成，训练样本数: {}", trainingData.size());
             return "模型训练成功，训练样本数: " + trainingData.size();
         } catch (Exception e) {
@@ -123,7 +123,7 @@ public class ComponentServiceImpl implements ComponentService {
     @Override
     public List<ComponentVO> predictClassification(List<ComponentVO> components) {
         log.info("对 {} 条数据进行分类预测", components.size());
-        
+
         // 实际项目中应该加载训练好的模型进行预测
         // 这里简单模拟预测结果
         components.forEach(component -> {
@@ -139,30 +139,30 @@ public class ComponentServiceImpl implements ComponentService {
                 component.setConfidence(0.6);
             }
         });
-        
+
         return components;
     }
+
     @Override
     public int importRawData(String filePath) {
-        log.info("导入原始零部件数据，文件路径: {}", filePath);
+        log.info("开始导入原始零部件数据，文件路径: {}", filePath);
         try {
             File file = ResourceUtils.getFile(filePath);
             final int[] count = {0};
-            // 读取Excel并转换为DdRawComponentVO（与ComponentVO结构一致，可直接映射）
             EasyExcel.read(file, ComponentVO.class, new PageReadListener<ComponentVO>(dataList -> {
                 List<DdRawComponentVO> rawList = dataList.stream()
                         .map(this::convertToRaw)
                         .collect(Collectors.toList());
                 count[0] += ddRawComponentMapper.batchInsert(rawList);
-                log.info("已导入 {} 条原始数据", count[0]);
+                log.info("当前批次处理完成，已累计导入 {} 条数据", count[0]);
             })).sheet().doRead();
+            log.info("文件处理完成，共导入 {} 条原始数据", count[0]);
             return count[0];
-        } catch (FileNotFoundException e) {
-            log.error("原始数据文件不存在", e);
-            throw new RuntimeException("原始数据文件不存在", e);
+        } catch (Exception e) {
+            log.error("处理原始数据文件失败", e);
+            throw new RuntimeException("处理原始数据文件失败", e);
         }
     }
-
     // 转换方法：ComponentVO -> DdRawComponentVO
     private DdRawComponentVO convertToRaw(ComponentVO vo) {
         DdRawComponentVO raw = new DdRawComponentVO();
@@ -173,5 +173,8 @@ public class ComponentServiceImpl implements ComponentService {
         // ... 其他字段同理
         return raw;
     }
+
 }
-    
+
+
+

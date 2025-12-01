@@ -38,7 +38,7 @@ public class ComponentVO {
     
     @ExcelProperty(value = "零部件重量", index = 5)
     @ColumnWidth(15)
-    private BigDecimal parentWeight;
+    private String parentWeight;
 
     // 子节点信息
     @ExcelProperty(value = "子节点类型", index = 6)
@@ -63,7 +63,7 @@ public class ComponentVO {
     
     @ExcelProperty(value = "子节点重量", index = 11)
     @ColumnWidth(15)
-    private BigDecimal subnodeWeight;
+    private String subnodeWeight;
 
     @ExcelProperty(value = "子节点数量", index = 12)
     @ColumnWidth(15)
